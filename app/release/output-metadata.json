@@ -1,0 +1,18 @@
+{
+  "version": 2,
+  "artifactType": {
+    "type": "APK",
+    "kind": "Directory"
+  },
+  "applicationId": "com.viatom.bloodoxygendemo",
+  "variantName": "release",
+  "elements": [
+    {
+      "type": "SINGLE",
+      "filters": [],
+      "versionCode": 1,
+      "versionName": "O2Ring_1.0.0.6",
+      "outputFile": "ViHealthDemo_VO2Ring_1.0.0.6_release.apk"
+    }
+  ]
+}

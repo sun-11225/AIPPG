@@ -1,0 +1,81 @@
+<resources>
+    <string name="app_name">BloodOxygenDemo</string>
+    <string name="oxys_title_dashboard">Dashboard</string>
+    <string name="oxys_title_history">History</string>
+
+        <string name="cancel">取消</string>
+        <string name="confirm">确定</string>
+        <string name="prompt">提示</string>
+        <string name="open">开启</string>
+        <string name="ignore">忽略</string>
+        <string name="permission_bluetooth">需要开启蓝牙，连接设备。</string>
+        <string name="permission_location_reason">定位权限是使用程序必须依赖的权限</string>
+        <string name="permission_location_setting">您需要去应用程序设置当中手动开启权限</string>
+        <string name="title_activity_main2">MainActivity2</string>
+        <!--
+        This string is used for square devices and overridden by hello_world in
+        values-round/strings.xml for round devices.
+        -->
+        <string name="hello_world">Hello Square World!</string>
+        <string name="title_activity_main3">MainActivity</string>
+        <!-- Strings used for fragments for navigation -->
+        <string name="dashboard_fragment_label">Dashboard Fragment</string>
+        <string name="second_fragment_label">Second Fragment</string>
+        <string name="report_list_fragment_label">Report List Fragment</string>
+        <string name="next">Next</string>
+        <string name="previous">Previous</string>
+
+        <string name="hello_first_fragment">Hello first fragment</string>
+        <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+        <string name="title_activity_main">MainActivity</string>
+        <string name="choose_device">请选择设备</string>
+        <string name="refresh">刷新</string>
+        <string name="connected_device">已连接设备</string>
+        <string name="current_device">当前设备</string>
+        <string name="connected">已连接</string>
+        <string name="device">设备</string>
+        <string name="connecting">连接中...</string>
+
+        <string name="measure_overtime">由于已达到单次测量最大时长（24小时），心电仪已经自动停止测量。如需继续测量，请您摘下心电仪后重新佩戴。</string>
+        <string name="i_know">我知道了</string>
+        <string name="public_lead_off_tip">导联已断开，请检查</string>
+        <string name="public_lead_off_msg">提示: 导联断开状态持续一分钟后主机会停止测量</string>
+        <string name="amp">25 mm/s 5 mm/mv</string>
+        <string name="collection">采集</string>
+
+        <string name="public_report_title">乐普医疗心脏数据中心</string>
+        <string name="report">报告</string>
+        <string name="public_name">姓名</string>
+        <string name="public_height">身高</string>
+        <string name="public_weight">体重</string>
+        <string name="public_birthday">出生日期:</string>
+        <string name="public_gender">性别</string>
+        <string name="tv_label_recording_duration">记录持续时间:</string>
+        <string name="tv_label_record_hr">心率: </string>
+        <string name="tv_label_result">结果:</string>
+        <string name="tv_label_record_note">备忘: </string>
+        <string name="title_activity_history_detail">数据详情</string>
+        <string name="public_ai_analyse_time">AI分析波形时长: </string>
+        <string name="public_ai_start_time">开始时间:</string>
+        <string name="public_ai_end_time">结束时间:</string>
+        <string name="public_ai_time">AI分析时长</string>
+        <string name="public_first_five_min">前5分钟</string>
+        <string name="public_ai_get_time">AI分析日期</string>
+        <string name="public_status">状态</string>
+        <string name="public_ai_tip">*由于检测者基本健康情况、检测环境以及设备状态受多因素影响，本报告结果供参考，请您关注心脏健康，根据建议及时就医。
+        \n客服电话：400–622–1120</string>
+        <string name="public_phone">客服电话：400–622–1120</string>
+        <string name="time">时间</string>
+        <string name="comma">:</string>
+        <string name="report_attr">增益:5mm/mV</string>
+        <string name="report_speed">走速:25mm/s</string>
+        <string name="loacl_report">本地报告</string>
+        <string name="aiReport">AI报告</string>
+
+    <string name="email_hint">Email</string>
+    <string name="password_hint">Password</string>
+    <string name="no_account">or create an account at</string>
+    <string name="login">Sign in</string>
+    <string name="sign_out">Sign out</string>
+
+</resources>

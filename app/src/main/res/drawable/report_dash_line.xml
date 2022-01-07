@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="line">
+    <stroke
+        android:color="@color/black"
+        android:width="1px"
+        android:dashWidth="2dp"
+        android:dashGap="2dp"/>
+    <!--width：线条的高度
+    color：颜色
+    dashWidth：破折线的宽度
+    dashGap：破折线间空隙的宽度
+    如果这里设置了width，xml中android:layout_height的值必须比它大。不设置就默认为0
+    -->
+</shape>

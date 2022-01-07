@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimary">#3DADD0</color>
+    <color name="colorPrimaryDark">#3291C3</color>
+    <color name="colorAccent">#03DAC5</color>
+
+
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorBlack33">#CC000000</color>
+    <color name="transparent">#00000000</color>
+    <color name="colorGrayDark">#929292</color>
+
+    <color name="colorBlueLight">#03A9F4</color>
+    <color name="colorGreenEcg">#42BE8D</color>
+    <color name="ListBkg">#E9E9E9</color>
+
+    <color name="chart_red">#f56c77</color>
+    <color name="chart_green">#69ff24</color>
+    <color name="chart_orange">#f7b942</color>
+    <color name="chart_motion">#61fff7</color>
+    <color name="red">#ff4343</color>
+    <color name="green">#89cfc1</color>
+    <color name="blue">#0277BD</color>
+    <color name="light_blue_2nd">#81D4FA</color>
+    <color name="light_blue">#03A9F4</color>
+    <color name="dark_blue">#0288D1</color>
+
+    <color name="colorGrayBg">#EFEFF4</color>
+    <color name="colorGrayE5">#E5E6E7</color>
+    <color name="colorGrayE9">#E9E9E9</color>
+    <color name="colorBlueBar">#007AFF</color>
+
+    <color name="ex_color_delete">#FFFF3B30</color>
+    <color name="line_grey">#d7d7d7</color>
+
+    <color name="colorEE964D">#EE964D</color>
+    <color name="colorHistoryTab">#1E7186</color>
+    <color name="colorSpo2WaveBg">#156183</color>
+    <color name="colorBkeE2">#E2E2E2</color>
+    <color name="colorBkeF3">#F3F3F3</color>
+    <color name="colorAA">#AAAAAA</color>
+    <color name="color0C">#0C0C0C</color>
+
+    <color name="color_FF1C1C1E">#ff1C1C1E</color>
+    <color name="color_2E747480">#2E747480</color>
+    <color name="color_99EBEBF5">#99EBEBF5</color>
+    <color name="color_545458">#545458</color>
+    <color name="color_EBEBF5">#EBEBF5</color>
+    <color name="color_2C2C2E">#2C2C2E</color>
+    <color name="color_3D5AFE">#3D5AFE</color>
+    <color name="color_767680">#767680</color>
+
+
+    <color name="color_dashboard_ruler">#666666</color>
+    <color name="color_dashboard_ecg_wave">#29EF57</color>
+    <color name="color_dashboard_ecg_wave_collecting">#F5E62A</color>
+
+
+    <color name="color_ecgbg">#000000</color>
+    <color name="color_ecgbg_cell">#3D767680</color>
+    <color name="color_ecgbg_grid_1mm">#0DEBEBF5</color>
+    <color name="color_ecgbg_grid_5mm">#0DEBEBF5</color>
+
+
+    <color name="color_363636">#363636</color>
+    <!-- report start-->
+    <color name="text_color_report_label">#313131</color>
+    <color name="text_color_report_value">#454545</color>
+    <color name="title_report">#0075c1</color>
+</resources>

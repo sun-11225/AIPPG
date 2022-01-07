@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="ctx"
+            type="com.viatom.bloodoxygendemo.fragment.DashboardFragment" />
+
+        <variable
+            name="viewModel"
+            type="com.viatom.bloodoxygendemo.viewmodel.DashboardViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black"
+        android:fitsSystemWindows="true"
+        android:paddingTop="10dp">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="实时"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="@id/device"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/device" />
+
+        <com.viatom.bloodoxygendemo.views.BatteryView
+            android:id="@+id/battery"
+            android:layout_width="36dp"
+            android:layout_height="16dp"
+            app:layout_constraintEnd_toStartOf="@id/device"
+            app:layout_constraintTop_toTopOf="@id/device"
+            app:layout_constraintBottom_toBottomOf="@id/device"
+            android:layout_marginEnd="5dp"
+            />
+
+        <TextView
+            android:id="@+id/device"
+            style="@style/h_16text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="@{() -> ctx.showDialog()}"
+            android:padding="10dp"
+            android:text="@string/device"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_pr"
+            style="@style/b_16text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="42dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="24dp"
+            android:text="80"
+            android:textColor="@color/white"
+            android:textSize="40sp"
+            app:layout_constraintStart_toEndOf="@id/tv_title"
+            app:layout_constraintTop_toBottomOf="@+id/tv_title" />
+
+        <TextView
+            android:id="@+id/tv_pr_img"
+            style="@style/h_16text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:text="pr"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="@id/tv_pr"
+            app:layout_constraintStart_toEndOf="@id/tv_pr" />
+
+        <ImageView
+            android:id="@+id/bpm.img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/heart_icon"
+           app:layout_constraintBottom_toTopOf="@id/tv_pr_img"
+            app:layout_constraintStart_toStartOf="@id/tv_pr_img"
+            app:layout_constraintEnd_toEndOf="@id/tv_pr_img"
+
+            />
+
+        <TextView
+            android:id="@+id/spo2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:text="100"
+            android:textColor="@color/white"
+            android:textSize="40sp"
+            app:layout_constraintBottom_toBottomOf="@id/tv_pr"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/bpm.text"
+            style="@style/h_16text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:text="spo2"
+            app:layout_constraintBottom_toBottomOf="@id/spo2"
+            app:layout_constraintStart_toEndOf="@id/spo2" />
+
+
+        <RelativeLayout
+            android:id="@+id/oxi_view"
+            android:layout_width="match_parent"
+            android:layout_height="240dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/spo2" />
+
+
+        <TextView
+            android:id="@+id/tv_warm_prompt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/oxi_view"
+            android:textColor="@color/white"
+            android:layout_margin="20dp"
+            android:visibility="gone"
+            android:text="测量前受试者应平稳静躺或静座，测量中避免手指的过度摆动及强烈的环境光。"/>
+
+        <TextView
+            android:id="@+id/collection"
+            android:layout_width="142dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="33dp"
+            android:background="@drawable/public_shape_white_corner_28"
+            android:gravity="center"
+            android:onClick="@{() -> ctx.manualCollect()}"
+            android:paddingVertical="10dp"
+            android:text="@string/collection"
+            android:textColor="@color/color_363636"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

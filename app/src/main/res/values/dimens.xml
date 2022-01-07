@@ -1,0 +1,9 @@
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="dash_line_width">1140px</dimen>
+    <dimen name="public_report_width">1170px</dimen>
+    <dimen name="public_report_padding">45px</dimen>
+    <dimen name="public_text_size_report">21px</dimen>
+
+
+</resources>
