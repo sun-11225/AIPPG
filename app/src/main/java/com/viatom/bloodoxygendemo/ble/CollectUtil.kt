@@ -69,7 +69,7 @@ class CollectUtil private constructor(val context: Context) {
 
     var startTime : String = ""
     var timeEnd : String = ""
-    private val sDateFormat = SimpleDateFormat("yyyy-MM-dd-HH:mm:ss", Locale.getDefault())
+    private val sDateFormat = SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.getDefault())
 
 
     lateinit var collectService: CollectService
@@ -230,7 +230,8 @@ class CollectUtil private constructor(val context: Context) {
             }
             .catch {
                 Log.e(C_TAG, "读秒异常终止")
-
+                age = ""
+                gender = ""
                 finishCollecting(false, TYPE_MANUAL,"采集异常终止")
 
             }.cancellable()
@@ -238,6 +239,8 @@ class CollectUtil private constructor(val context: Context) {
                 result.doFailure {
                     Log.e(C_TAG, "读秒 doFailure， $it")
                     collectSwitch = false
+                    age = ""
+                    gender = ""
                     finishCollecting(false, TYPE_MANUAL, "${it?.message}")
                 }
                 result.doSuccess { res ->
@@ -245,6 +248,8 @@ class CollectUtil private constructor(val context: Context) {
                     Log.d(C_TAG, "读秒 $res")
                     if (!manualCounting){
                         Log.d(C_TAG, "其他原因已经停止采集")
+                        age = ""
+                        gender = ""
                         return@collect
                     }
 
@@ -282,11 +287,17 @@ class CollectUtil private constructor(val context: Context) {
                 } ?: run {
                     Log.e(C_TAG, "userId is null ")
                 }
-
+                //清空保存的年龄性别
+                age = ""
+                gender = ""
             } ?: {
+                //清空保存的年龄性别
+                age = ""
+                gender = ""
                 Log.e(C_TAG, "TYPE_MANUAL: saveCollectSpo2 is null  ")
                 finishCollecting(false, TYPE_MANUAL, "文件保存失败")
             }
+
         } ?: run {
             Log.e(C_TAG, "deviceName is null ")
         }
