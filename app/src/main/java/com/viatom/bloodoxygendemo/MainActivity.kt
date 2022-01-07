@@ -370,15 +370,15 @@ class MainActivity : AppCompatActivity(), BleChangeObserver {
 //                viewModel.resetDashboard()
 
                 //app 运行时如果断开 去重连。
-                if (LpBleUtil.isAutoConnect(SUPPORT_MODEL)) { //默认自动重连开启
-                    viewModel.curBluetooth.value?.deviceName?.let {
-                        Log.d(TAG,"重新连接")
-                        LpBleUtil.reconnect(
-                            SUPPORT_MODEL,
-                            it
-                        )
-                    }
-                }
+//                if (LpBleUtil.isAutoConnect(SUPPORT_MODEL)) { //默认自动重连开启
+//                    viewModel.curBluetooth.value?.deviceName?.let {
+//                        Log.d(TAG,"重新连接")
+//                        LpBleUtil.reconnect(
+//                            SUPPORT_MODEL,
+//                            it
+//                        )
+//                    }
+//                }
 
             }
             LpBleUtil.State.CONNECTED -> {

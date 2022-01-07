@@ -20,11 +20,13 @@ buildscript {
         room_version = "2.3.0-rc01"
 
         lepu_ble = "1.0.11"
+        lepu_ble_new = "2.0.0.10"
 
         retrofit = "2.9.0"
         okhttpLogging = "4.9.0"
 
         live_event_bus = "1.7.3"
+        live_event_bus_new = "1.8.0"
         autosize = "1.2.1"
         bugly = "latest.release"
         pdf_viewer = "3.2.0-beta.1"

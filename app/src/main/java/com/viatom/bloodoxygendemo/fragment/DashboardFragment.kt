@@ -25,6 +25,7 @@ import com.lepu.blepro.ble.cmd.OxyBleResponse
 import com.lepu.blepro.ble.data.OxyDataController
 import com.lepu.blepro.event.EventMsgConst
 import com.lepu.blepro.event.InterfaceEvent
+import com.lepu.blepro.objs.Bluetooth
 import com.viatom.bloodoxygendemo.R
 import com.viatom.bloodoxygendemo.ble.BatteryInfo
 import com.viatom.bloodoxygendemo.ble.CollectUtil
@@ -207,6 +208,14 @@ class DashboardFragment : Fragment() {
             }
 
         })
+
+//        //导联状态
+//        viewModel.fingerState.observe(viewLifecycleOwner){
+//            Log.d("demo","导联状态")
+//            if (it != "1"){
+//                LpBleUtil.stopRtTask(Constant.BluetoothConfig.SUPPORT_MODEL)
+//            }
+//        }
 
     }
 

@@ -17,6 +17,7 @@ import com.bigkoo.pickerview.builder.OptionsPickerBuilder
 import com.lepu.blepro.ble.cmd.OxyBleResponse
 import com.viatom.bloodoxygendemo.ble.BatteryInfo
 import com.viatom.bloodoxygendemo.ble.CollectUtil
+import com.viatom.bloodoxygendemo.ble.LpBleUtil
 import com.viatom.bloodoxygendemo.constants.Constant
 import com.viatom.lib.vihealth.update.dialog.DialogHelper
 
@@ -128,6 +129,11 @@ class DashboardViewModel : ViewModel() {
 
     private fun collectData(collectUtil: CollectUtil, data: ByteArray){
         Log.e("collect", "temp == ${data.joinToString() }")//${Constant.BluetoothConfig.currentRunState}
+
+        if (data.isEmpty()){
+            Log.d("demo","实时数据为空，停止实时任务")
+            LpBleUtil.stopRtTask(Constant.BluetoothConfig.SUPPORT_MODEL)
+        }
 
         if (collectUtil.manualCounting) {
             if (data.isEmpty()) {

@@ -109,7 +109,7 @@ android {
 }
 
 dependencies {
-
+//    implementation fileTree(dir: 'libs', include: ['*.jar','*.aar'])
 
     api "org.jetbrains.kotlin:kotlin-stdlib:$rootProject.kotlin_version"
     api "androidx.activity:activity-ktx:$rootProject.activity_ktx"
@@ -141,16 +141,15 @@ dependencies {
 
     //EventBus
     implementation "com.jeremyliao:live-event-bus-x:$rootProject.live_event_bus"
-//    implementation "io.github.jeremyliao:live-event-bus-x:1.8.0"
-
+//    implementation "io.github.jeremyliao:live-event-bus-x:$rootProject.live_event_bus"
 
 
     // 屏幕适配
     api "me.jessyan:autosize:$rootProject.autosize"
 
     //Lepu Ble
+//    implementation "com.github.viatomEcho:LepuBle:$rootProject.lepu_ble_new"
     api "com.lepu.blepro:lepu-ble:$rootProject.lepu_ble"
-//    implementation 'com.github.viatomEcho:LepuBle:2.0.0.9'
 
 
     //retrofit
