@@ -31,6 +31,7 @@ import com.viatom.bloodoxygendemo.ble.BatteryInfo
 import com.viatom.bloodoxygendemo.ble.CollectUtil
 import com.viatom.bloodoxygendemo.ble.LpBleUtil
 import com.viatom.bloodoxygendemo.constants.Constant
+import com.viatom.bloodoxygendemo.constants.Constant.BluetoothConfig.Companion.SUPPORT_MODEL
 import com.viatom.bloodoxygendemo.constants.Constant.Collection.Companion.age
 import com.viatom.bloodoxygendemo.constants.Constant.Collection.Companion.collectSwitch
 import com.viatom.bloodoxygendemo.constants.Constant.Collection.Companion.gender
@@ -211,9 +212,15 @@ class DashboardFragment : Fragment() {
 
 //        //导联状态
 //        viewModel.fingerState.observe(viewLifecycleOwner){
-//            Log.d("demo","导联状态")
+//            Log.d("demo","导联状态变化 $it")
 //            if (it != "1"){
 //                LpBleUtil.stopRtTask(Constant.BluetoothConfig.SUPPORT_MODEL)
+//                collectUtil.manualCounting = false
+//                collectSwitch = false
+//                viewModel.fingerStateChanged("1")
+//                viewModel._collectBtnText.postValue("采集")
+//                Toast.makeText(requireContext(), "导联断开， 无法采集", Toast.LENGTH_SHORT).show()
+//
 //            }
 //        }
 
@@ -477,6 +484,10 @@ class DashboardFragment : Fragment() {
                     } else {
                         lifecycleScope.launch {
                             activity?.let {
+                                if (LpBleUtil.isRtStop(SUPPORT_MODEL)) {
+                                    Log.d("demo","点击事件开启实时任务")
+                                    LpBleUtil.startRtTask(SUPPORT_MODEL)
+                                }
                                 collectUtil.manualCollect(viewModel, mainVM)
                             }
                         }

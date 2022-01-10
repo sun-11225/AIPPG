@@ -14,7 +14,7 @@ android {
         minSdk 24
         targetSdk 30
         versionCode 1
-        versionName "O2Ring_1.0.0.6"
+        versionName "O2Ring_1.0.0.7"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
