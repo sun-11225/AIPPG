@@ -10,16 +10,20 @@ import android.view.View
 import android.view.ViewGroup
 import android.view.WindowManager
 import android.view.inputmethod.InputMethodManager
+import android.widget.Toast
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.bigkoo.pickerview.builder.OptionsPickerBuilder
 import com.lepu.blepro.ble.cmd.OxyBleResponse
+import com.viatom.bloodoxygendemo.MyApp
 import com.viatom.bloodoxygendemo.ble.BatteryInfo
 import com.viatom.bloodoxygendemo.ble.CollectUtil
 import com.viatom.bloodoxygendemo.ble.LpBleUtil
 import com.viatom.bloodoxygendemo.constants.Constant
+import com.viatom.bloodoxygendemo.constants.Constant.Collection.Companion.collectSwitch
 import com.viatom.lib.vihealth.update.dialog.DialogHelper
+import kotlin.coroutines.coroutineContext
 
 /**
  * @author：created by SunHao
@@ -133,6 +137,12 @@ class DashboardViewModel : ViewModel() {
         if (data.isEmpty()){
             Log.d("demo","实时数据为空，停止实时任务")
             LpBleUtil.stopRtTask(Constant.BluetoothConfig.SUPPORT_MODEL)
+            collectUtil.manualCounting = false
+            collectSwitch = false
+            Constant.Collection.age = ""
+            Constant.Collection.gender = ""
+            _collectBtnText.postValue("采集")
+            Toast.makeText(MyApp.context,"采集数据异常，请重新采集！",Toast.LENGTH_LONG).show()
         }
 
         if (collectUtil.manualCounting) {

@@ -74,7 +74,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="15dp"
-            android:text="pr"
+            android:text="PR"
             android:textColor="@color/white"
             app:layout_constraintBottom_toBottomOf="@id/tv_pr"
             app:layout_constraintStart_toEndOf="@id/tv_pr" />
@@ -107,7 +107,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="15dp"
-            android:text="spo2"
+            android:text="SPO2"
             app:layout_constraintBottom_toBottomOf="@id/spo2"
             app:layout_constraintStart_toEndOf="@id/spo2" />
 
@@ -132,7 +132,7 @@
             android:textColor="@color/white"
             android:layout_margin="20dp"
             android:visibility="gone"
-            android:text="测量前受试者应平稳静躺或静座，测量中避免手指的过度摆动及强烈的环境光。"/>
+            android:text="测量前受试者应平稳静躺或静坐，测量中避免手指的过度摆动及强烈的环境光。"/>
 
         <TextView
             android:id="@+id/collection"

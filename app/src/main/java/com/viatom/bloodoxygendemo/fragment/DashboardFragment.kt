@@ -26,6 +26,7 @@ import com.lepu.blepro.ble.data.OxyDataController
 import com.lepu.blepro.event.EventMsgConst
 import com.lepu.blepro.event.InterfaceEvent
 import com.lepu.blepro.objs.Bluetooth
+import com.viatom.bloodoxygendemo.MyApp
 import com.viatom.bloodoxygendemo.R
 import com.viatom.bloodoxygendemo.ble.BatteryInfo
 import com.viatom.bloodoxygendemo.ble.CollectUtil
@@ -397,7 +398,6 @@ class DashboardFragment : Fragment() {
 
     fun manualCollect() {
 //        collectSwitch = !collectSwitch
-
         if (mainVM.connectState.value != LpBleUtil.State.CONNECTED) {
             Toast.makeText(requireContext(), "蓝牙未连接，无法采集", Toast.LENGTH_SHORT).show()
             return
