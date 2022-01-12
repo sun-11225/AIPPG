@@ -22,7 +22,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="88dp"
-        android:paddingBottom="47dp"
         android:background="@color/color_FF1C1C1E">
 
         <TextView
@@ -130,7 +129,7 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/connect_dialog_cl"
             android:layout_width="match_parent"
-            android:layout_height="204dp"
+            android:layout_height="180dp"
             app:layout_constraintTop_toBottomOf="@id/label1"
             android:background="@drawable/public_shape_corner_12"
             android:layout_marginTop="5dp"
@@ -146,15 +145,28 @@
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/image_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Close"
+            android:textAllCaps="false"
+            android:layout_margin="10dp"
+            android:background="@drawable/layout_gray_shape_radius_10"
+            android:textColor="@color/colorBlack"
+            app:layout_constraintTop_toBottomOf="@id/connect_dialog_cl"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <ImageView
-        android:id="@+id/image_back"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:src="@mipmap/athlete_close_btn"
-        android:layout_gravity="center"/>
+<!--    <ImageView-->
+<!--        android:id="@+id/image_back"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="40dp"-->
+<!--        android:src="@mipmap/athlete_close_btn"-->
+<!--        android:layout_gravity="center"/>-->
 
 </LinearLayout>
 </layout>

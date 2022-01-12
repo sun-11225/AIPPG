@@ -131,6 +131,7 @@
             app:layout_constraintTop_toBottomOf="@id/oxi_view"
             android:textColor="@color/white"
             android:layout_margin="20dp"
+            android:textSize="16sp"
             android:visibility="gone"
             android:text="测量前受试者应平稳静躺或静坐，测量中避免手指的过度摆动及强烈的环境光。"/>
 

@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Android/BloodOxygenDemo/app/src/main/res/drawable/layout_white_shape_radius_10.xml" value="0.3685185185185185" />
         <entry key="..\:/Android/BloodOxygenDemo/app/src/main/res/layout/connect_dialog.xml" value="0.25" />
         <entry key="..\:/Android/BloodOxygenDemo/app/src/main/res/layout/fragment_dashboard.xml" value="0.33" />
         <entry key="..\:/Android/BloodOxygenDemo/app/src/main/res/layout/fragment_report_item.xml" value="0.33" />

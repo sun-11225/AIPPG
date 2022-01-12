@@ -3,6 +3,7 @@ package com.viatom.bloodoxygendemo.fragment
 import android.annotation.SuppressLint
 import android.app.AlertDialog
 import android.app.Dialog
+import android.content.Context
 import android.os.Bundle
 import android.os.Handler
 import android.util.Log
@@ -42,6 +43,8 @@ import com.viatom.bloodoxygendemo.viewmodel.DashboardViewModel
 import com.viatom.bloodoxygendemo.viewmodel.MainViewModel
 import com.viatom.bloodoxygendemo.views.OxyView
 import com.viatom.lib.vihealth.update.dialog.DialogHelper
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.delay
 
 import kotlinx.coroutines.launch
 import org.w3c.dom.Text
@@ -324,7 +327,8 @@ class DashboardFragment : Fragment() {
         LiveEventBus.get(Constant.Event.analysisProcessSuccess).observe(viewLifecycleOwner, {
             it?.let {
                 if ((it as String).isNotEmpty())
-                    Toast.makeText(requireContext(), it, Toast.LENGTH_SHORT).show()
+                    showGeneralDialog(requireContext(),it)
+//                    Toast.makeText(requireContext(), it, Toast.LENGTH_SHORT).show()
             }
 
 
@@ -338,7 +342,8 @@ class DashboardFragment : Fragment() {
         LiveEventBus.get(Constant.Event.analysisProcessFailed).observe(viewLifecycleOwner, {
             it?.let {
                 if ((it as String).isNotEmpty())
-                    Toast.makeText(requireContext(), it, Toast.LENGTH_SHORT).show()
+                    showGeneralDialog(requireContext(),it)
+//                    Toast.makeText(requireContext(), it, Toast.LENGTH_SHORT).show()
             }
 
 //            viewModel._collectBtnText.value = getString(R.string.collection)
@@ -480,6 +485,7 @@ class DashboardFragment : Fragment() {
             }
             btnOk.setOnClickListener {
                     if (age.isNullOrEmpty() || gender.isNullOrEmpty()) {
+//                        showGeneralDialog(requireContext(),"请输入年龄和性别后开始测量")
                         Toast.makeText(context, "请输入年龄和性别后开始测量", Toast.LENGTH_SHORT).show()
                     } else {
                         lifecycleScope.launch {
@@ -512,6 +518,25 @@ class DashboardFragment : Fragment() {
     override fun onDestroyView() {
         super.onDestroyView()
         Log.d(TAG, "onDestroyView")
+    }
+
+    /**
+     * 通用2秒提示框
+     */
+    private fun showGeneralDialog(context: Context, msg: String) {
+        val dialog: androidx.appcompat.app.AlertDialog = context.let {
+            val builder = androidx.appcompat.app.AlertDialog.Builder(it)
+            builder.apply {
+                setMessage(msg)
+                setCancelable(false)
+            }
+            builder.create()
+        }
+        dialog.show()
+        GlobalScope.launch {
+            delay(2000)
+            dialog.dismiss()
+        }
     }
 
 
